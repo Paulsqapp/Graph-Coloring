@@ -3,7 +3,7 @@
 
 '''
 SCORE OF 38/60. 63.3 %
-TRY NEIGHBOHOOD SWAPING
+TRY NEIGHBOHOOD SWAPING TO IMPORVE SCORE
 '''
 from collections import Counter
 import networkx
@@ -53,8 +53,7 @@ def solve_it(input_data):
         
         else:
             count_nodes[v] = [k]
-
-   
+ 
     #print('002', edges)
     #print('003', table)
     #print('003 b', count_nodes)
@@ -109,10 +108,6 @@ def solve_it(input_data):
             colors = max(i, colors)
                     
     assment_2 = Counter(assment)
-    #print('table 001', assment_2)
-
-            
-
 
     output_data = str(colors+1) + ' ' + str(0) + '\n'
     output_data += ' '.join(map(str, assment))
@@ -124,7 +119,7 @@ import sys
 
 if __name__ == '__main__':
     import sys
-    file_location = "C:/Users/paul kuria/Documents/coloring/data/gc_4_1" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
+    file_location = "path_to_files1" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
     with open(file_location, 'r') as input_data_file: #gc_70_1
             input_data = input_data_file.read()
             print('----final---',solve_it(input_data))
