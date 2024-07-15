@@ -77,9 +77,7 @@ def solve_it(input_data):
 
         colors = max(i, colors)
         index += 1
-        
 
-    #print('final', assment  )
 
     # build a trivial solution
     # every node has its own color
@@ -91,12 +89,11 @@ def solve_it(input_data):
 
     return output_data
 
-
 import sys
 
 if __name__ == '__main__':
     import sys
-    file_location = "C:/Users/paul kuria/Documents/coloring/data/gc_20_9" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
+    file_location = "path_to_files" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
     with open(file_location, 'r') as input_data_file: #gc_70_1
             input_data = input_data_file.read()
             print('----final---',solve_it(input_data))
