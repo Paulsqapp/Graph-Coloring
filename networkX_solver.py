@@ -28,11 +28,7 @@ def solve_it(input_data):
         edges.append((int(parts[0]), int(parts[1])))
         G.add_nodes_from((int(parts[0]), int(parts[1])))
         G.add_edge(int(parts[0]), int(parts[1]))
-        
-   
-    #print('002', G.edges(), '\n', G.nodes())
-    #nx.draw(G)
-    #plt.show()
+
 
     coloring = nx.coloring.greedy_color(G, strategy='random_sequential')
     #print(coloring)
@@ -41,12 +37,6 @@ def solve_it(input_data):
     count = 0
     for k,v in coloring.items():
         order[k] = v
-                
-    #print('003', table)
-    #print('003 b', count_nodes)
-
-    # sort nodes according to number of linked neighbors
-        
     
     colors = max(order)
     
@@ -60,7 +50,7 @@ import sys
 
 if __name__ == '__main__':
     import sys
-    file_location = "C:/Users/paul kuria/Documents/coloring/data/gc_4_1" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
+    file_location = "path_to_files" #gc_20_1, gc_4_1, gc_20_3, gc_20_7, gc_50_7,gc_50_9, gc_1000_7
     with open(file_location, 'r') as input_data_file: #gc_70_1
             input_data = input_data_file.read()
             print('----final---',solve_it(input_data))
